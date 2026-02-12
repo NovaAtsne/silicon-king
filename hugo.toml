@@ -1,0 +1,58 @@
+baseURL = "https://your-domain.com/"
+languageCode = "en-US"
+title = "硅基之王 - 归墟档案库"
+theme = "terminal"
+
+[params]
+  # 基础颜色
+  mainColor = "#e0e0f0"        # 正文文字
+  backgroundColor = "#0a0a0f"  # 背景
+  
+  # 终端特色
+  terminalColor = false        # 设为true启用终端绿，但我们不用
+  terminalColors = true        # 启用完整终端色板
+  
+  # 自定义色板（当 terminalColors = true 时生效）
+  [params.colors]
+    black = "#1a1a2e"          # 深空黑
+    red = "#FF6B8B"            # 错误/警告
+    green = "#00FF9D"          # 成功/通过
+    yellow = "#FFD700"         # 注意/高亮
+    blue = "#00AAFF"           # 链接/信息
+    magenta = "#9A7FD1"        # 归墟紫色
+    cyan = "#00FFFF"           # 代码/Ψ频谱
+    white = "#f0f0ff"          # 文本（非白）
+    brightBlack = "#2a2a5a"    # 暗背景
+    brightRed = "#FF8BA0"
+    brightGreen = "#00FFC3"
+    brightYellow = "#FFE55C"
+    brightBlue = "#66C2FF"
+    brightMagenta = "#B8A1E6"
+    brightCyan = "#66FFFF"     # 亮Ψ色
+    brightWhite = "#ffffff"
+
+[menu]
+  # 导航菜单 - 设计为“协议选项”
+  [[menu.main]]
+    identifier = "archive"
+    name = "【核心档案】"
+    url = "/settings/"
+    weight = 1
+  [[menu.main]]
+    identifier = "log"
+    name = ">>> 系统日志 <<<"
+    url = "/log/"
+    weight = 2
+  [[menu.main]]
+    identifier = "contract"
+    name = "█ 剧情表 █"
+    url = "/contract/"
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "关于我们"
+    url = "/about/"
+    weight = 4
+
+[markup.goldmark.renderer]
+  unsafe = true
